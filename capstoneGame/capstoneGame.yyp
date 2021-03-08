@@ -5,7 +5,6 @@
     {"id":{"name":"EnemyMoveAndCollide","path":"scripts/EnemyMoveAndCollide/EnemyMoveAndCollide.yy",},"order":0,},
     {"id":{"name":"PlayerAnimationFrameHit","path":"scripts/PlayerAnimationFrameHit/PlayerAnimationFrameHit.yy",},"order":0,},
     {"id":{"name":"SpriteStateSet","path":"scripts/SpriteStateSet/SpriteStateSet.yy",},"order":2,},
-    {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"order":15,},
     {"id":{"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":4,},
     {"id":{"name":"sPlayerA2HB","path":"sprites/sPlayerA2HB/sPlayerA2HB.yy",},"order":7,},
