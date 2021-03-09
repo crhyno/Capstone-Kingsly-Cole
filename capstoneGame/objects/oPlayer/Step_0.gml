@@ -85,6 +85,11 @@ switch (state)
 	#region Attack One State
 	
 		sprite_index = sPlayerA;
+		
+		if (AnimationFrameHit(0))
+		{
+			CreateHitbox(x, y, self, sPlayerAHB, 4, 5, 1, image_xscale);
+		}
 			
 		if (key_attack2 == 1) && PlayerAnimationFrameHit(4, 6)
 		{
@@ -107,6 +112,11 @@ switch (state)
 	
 		#region Attack Two State
 		SpriteStateSet(sPlayerA2, 0);
+		
+		if (AnimationFrameHit(0))
+		{
+			CreateHitbox(x, y, self, sPlayerA2HB, 4, 1, image_xscale);
+		}
 		
 	#endregion
 	break;

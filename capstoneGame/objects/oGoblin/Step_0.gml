@@ -6,25 +6,35 @@ switch (state) {
 	case "idle":
 	#region Idle State
 	
-		sprite_index = sGoblin;
-		image_xscale = sign(oPlayer.x - x);
+		if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) {
+			state = "chase";
+		}
+		else {		
+						
+			sprite_index = sGoblin;
+			image_xscale = sign(oPlayer.x - x);
 		
-		if (image_xscale == 0) image_xscale = -1;
+			if (image_xscale == 0) image_xscale = -1;
 	
-		//Vertical collision
-		if (place_meeting(x,y+vsp,oWall)) 
-		{
-			Collision(x, y+vsp);
-			vsp = 0;
+			//Vertical collision
+			if (place_meeting(x,y+vsp,oWall)) 
+			{
+				Collision(x, y+vsp);
+				vsp = 0;
 
-		}
-		y = y + vsp;
+			}
+			y = y + vsp;
 				
-		if (image_xscale == 1) {
-			if (x + chase_range <= oPlayer.x) state = "chase";
-		}
-		if (image_xscale == -1) {
-			if (x - chase_range <= oPlayer.x) state = "chase";
+			if (image_xscale == 1) {
+				if (atLedge != 1) {
+					if (x + chase_range <= oPlayer.x) state = "chase";
+				}
+			}
+			if (image_xscale == -1) {
+				if (atLedge != 1) {
+					if (x - chase_range <= oPlayer.x) state = "chase";
+				}
+			}
 		}
 				
 	#endregion
@@ -33,7 +43,9 @@ switch (state) {
 	case "chase":
 	#region Chase State
 	
-		sprite_index = sGoblinR
+		CheckForEdge(x+hsp + (sprite_width / 2), y+1);
+			
+		sprite_index = sGoblinR																			
 		image_xscale = sign(oPlayer.x - x);
 		
 		if (image_xscale == 0) image_xscale = -1;
@@ -48,7 +60,7 @@ switch (state) {
 	
 	case "attack":
 	#region Attack State
-		SpriteStateSet(sGoblinA, 0);			
+		SpriteStateSet(sGoblinA, 0);		
 	#endregion
 	break;
 	
