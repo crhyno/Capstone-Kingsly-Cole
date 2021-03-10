@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 189,
+  "bbox_left": 40,
+  "bbox_right": 159,
   "bbox_top": 0,
-  "bbox_bottom": 159,
+  "bbox_bottom": 79,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1851747f-e81a-4069-9cf3-a59b156f5b51","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1851747f-e81a-4069-9cf3-a59b156f5b51","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"LayerId":{"name":"27373f68-9fe2-4a18-8611-76f1812da5c0","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWoodTiles2","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"resourceVersion":"1.0","name":"1851747f-e81a-4069-9cf3-a59b156f5b51","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cf35e9aa-f3f7-413a-852b-fc64495457f0","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cf35e9aa-f3f7-413a-852b-fc64495457f0","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"LayerId":{"name":"3648a1d2-0846-4c19-8ad9-b330c41b74ab","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWoodTiles2","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"resourceVersion":"1.0","name":"cf35e9aa-f3f7-413a-852b-fc64495457f0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sWoodTiles2","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e3fe4d7d-f637-4cec-9e2c-e001cc128a21","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1851747f-e81a-4069-9cf3-a59b156f5b51","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0cdbaf34-d859-4958-9eef-4bb1d0eac930","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf35e9aa-f3f7-413a-852b-fc64495457f0","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27373f68-9fe2-4a18-8611-76f1812da5c0","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3648a1d2-0846-4c19-8ad9-b330c41b74ab","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Tiles",
