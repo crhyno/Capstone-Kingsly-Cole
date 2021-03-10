@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 199,
+  "bbox_right": 63,
   "bbox_top": 0,
-  "bbox_bottom": 159,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 200,
-  "height": 160,
+  "width": 64,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","path":"sprites/sGrassTiles/sGrassTiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","path":"sprites/sGrassTiles/sGrassTiles.yy",},"LayerId":{"name":"87722b4e-efb6-4559-b7ce-4b1237c75335","path":"sprites/sGrassTiles/sGrassTiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},"resourceVersion":"1.0","name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a8579495-294b-4c14-bf33-5b780c2209c1","path":"sprites/sTrigger/sTrigger.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a8579495-294b-4c14-bf33-5b780c2209c1","path":"sprites/sTrigger/sTrigger.yy",},"LayerId":{"name":"45cb243f-d30d-4bd1-826b-0fd2368af3bc","path":"sprites/sTrigger/sTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTrigger","path":"sprites/sTrigger/sTrigger.yy",},"resourceVersion":"1.0","name":"a8579495-294b-4c14-bf33-5b780c2209c1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},
+    "spriteId": {"name":"sTrigger","path":"sprites/sTrigger/sTrigger.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5efdeb3c-f180-46f4-9265-84d3ca96c978","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","path":"sprites/sGrassTiles/sGrassTiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9b15a379-db1a-4496-8839-8c4acdde67c6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8579495-294b-4c14-bf33-5b780c2209c1","path":"sprites/sTrigger/sTrigger.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},
+    "parent": {"name":"sTrigger","path":"sprites/sTrigger/sTrigger.yy",},
     "resourceVersion": "1.3",
-    "name": "sGrassTiles",
+    "name": "sTrigger",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"87722b4e-efb6-4559-b7ce-4b1237c75335","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"45cb243f-d30d-4bd1-826b-0fd2368af3bc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sGrassTiles",
+  "name": "sTrigger",
   "tags": [],
   "resourceType": "GMSprite",
 }

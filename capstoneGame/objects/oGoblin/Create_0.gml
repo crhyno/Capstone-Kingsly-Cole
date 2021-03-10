@@ -1,12 +1,12 @@
 hsp = 0;
 vsp = 0;
 grv = 0.5;
-walksp = 2;
+walksp = 3;
 dir = -1;
 
 distance_to_player = 0;
 chase_range = 400;
-chase_rangeY = 100;
+chase_rangeY = 150;
 attack_range = 120;
 
 afraidOfHeights = 1;

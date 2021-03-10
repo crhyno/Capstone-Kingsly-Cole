@@ -6,10 +6,14 @@ switch (state) {
 	case "idle":
 	#region Idle State
 	
-		if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) {
-			state = "chase";
-		}
-		else {		
+		if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) state = "chase";
+		else {	
+			
+			if (atLedge != 1) {
+				if (oPlayer.x <= x + chase_range || oPlayer.x <= x - chase_range) state = "chase";
+				if (oPlayer.y <= y - chase_rangeY || oPlayer.y <= y + chase_rangeY) state = "chase";
+				else state = "idle";
+			}
 						
 			sprite_index = sGoblin;
 			image_xscale = sign(oPlayer.x - x);
@@ -24,17 +28,6 @@ switch (state) {
 
 			}
 			y = y + vsp;
-				
-			if (image_xscale == 1) {
-				if (atLedge != 1) {
-					if (x + chase_range <= oPlayer.x) state = "chase";
-				}
-			}
-			if (image_xscale == -1) {
-				if (atLedge != 1) {
-					if (x - chase_range <= oPlayer.x) state = "chase";
-				}
-			}
 		}
 				
 	#endregion
@@ -44,16 +37,22 @@ switch (state) {
 	#region Chase State
 	
 		CheckForEdge(x+hsp + (sprite_width / 2), y+1);
+		
+		if (oPlayer.x > x + chase_range || oPlayer.x < x - chase_range) state = "idle";
+		else if (oPlayer.y > y + chase_rangeY || oPlayer.y < y - chase_rangeY) state = "idle";		
+		else {	
 			
-		sprite_index = sGoblinR																			
-		image_xscale = sign(oPlayer.x - x);
+			sprite_index = sGoblinR																			
+			image_xscale = sign(oPlayer.x - x);
 		
-		if (image_xscale == 0) image_xscale = -1;
+			if (image_xscale == 0) image_xscale = -1;
 		
-		distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
+			distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 		
-		if (distance_to_player < attack_range) state = "attack";
-		else EnemyMoveAndCollide(image_xscale * walksp, 0);
+			if (distance_to_player < attack_range) state = "attack";
+			else EnemyMoveAndCollide(image_xscale * walksp, 0);
+		}
+
 	
 	#endregion
 	break;

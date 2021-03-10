@@ -1,1 +1,1 @@
-game_restart();
+SlideTransition("restart")

@@ -1,9 +1,18 @@
 //Gets the players input
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(ord("W"));
-key_attack = keyboard_check_pressed(ord("Q"));
-key_attack2 = keyboard_check_pressed(ord("Q"));
+if (hasControl) 
+{
+	key_left = keyboard_check(ord("A"));
+	key_right = keyboard_check(ord("D"));
+	key_jump = keyboard_check_pressed(ord("W"));
+	key_attack = keyboard_check_pressed(ord("Q"));
+	key_attack2 = keyboard_check_pressed(ord("Q"));
+} 
+else 
+{
+	key_left = 0;
+	key_right = 0;
+	key_jump = 0;
+}
 
 //Calculate movement
 var move = key_right - key_left;

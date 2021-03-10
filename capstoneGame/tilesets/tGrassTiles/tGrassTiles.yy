@@ -75,7 +75,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "TileSet1",
+  "name": "tGrassTiles",
   "tags": [],
   "resourceType": "GMTileSet",
 }

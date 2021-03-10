@@ -8,7 +8,7 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 199,
+  "bbox_right": 189,
   "bbox_top": 0,
   "bbox_bottom": 159,
   "HTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","path":"sprites/sGrassTiles/sGrassTiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","path":"sprites/sGrassTiles/sGrassTiles.yy",},"LayerId":{"name":"87722b4e-efb6-4559-b7ce-4b1237c75335","path":"sprites/sGrassTiles/sGrassTiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},"resourceVersion":"1.0","name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c644f164-93f1-4fa2-a09b-592e36ffb95f","path":"sprites/sWoodTiles/sWoodTiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c644f164-93f1-4fa2-a09b-592e36ffb95f","path":"sprites/sWoodTiles/sWoodTiles.yy",},"LayerId":{"name":"219f1d6e-db35-4d39-9128-52773e9a4be1","path":"sprites/sWoodTiles/sWoodTiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWoodTiles","path":"sprites/sWoodTiles/sWoodTiles.yy",},"resourceVersion":"1.0","name":"c644f164-93f1-4fa2-a09b-592e36ffb95f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},
+    "spriteId": {"name":"sWoodTiles","path":"sprites/sWoodTiles/sWoodTiles.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5efdeb3c-f180-46f4-9265-84d3ca96c978","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0eb4860c-ead3-4b73-a9ae-87fafa847d06","path":"sprites/sGrassTiles/sGrassTiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"281d193c-5c2a-4787-9ad2-823a3aa2993e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c644f164-93f1-4fa2-a09b-592e36ffb95f","path":"sprites/sWoodTiles/sWoodTiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sGrassTiles","path":"sprites/sGrassTiles/sGrassTiles.yy",},
+    "parent": {"name":"sWoodTiles","path":"sprites/sWoodTiles/sWoodTiles.yy",},
     "resourceVersion": "1.3",
-    "name": "sGrassTiles",
+    "name": "sWoodTiles",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"87722b4e-efb6-4559-b7ce-4b1237c75335","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"219f1d6e-db35-4d39-9128-52773e9a4be1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Tiles",
     "path": "folders/Sprites/Tiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sGrassTiles",
+  "name": "sWoodTiles",
   "tags": [],
   "resourceType": "GMSprite",
 }
