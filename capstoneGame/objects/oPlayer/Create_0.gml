@@ -6,3 +6,5 @@ walksp = 5;
 state = "move";
 hasControl = 1;
 
+hitByAttack = ds_list_create();
+

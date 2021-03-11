@@ -1,16 +1,11 @@
-hsp = 0;
-vsp = 0;
-grv = 0.5;
-walksp = 3;
-dir = -1;
+/// @description Insert description here
+// You can write your code in this editor
 
-distance_to_player = 0;
-chase_range = 400;
-chase_rangeY = 150;
-attack_range = 120;
+// Inherit the parent event
+event_inherited();
 
-afraidOfHeights = 1;
-atLedge = 0;
-facingLedge = 0;
+idleSprite = sGoblin;
+chaseSprite = sGoblinR;
+attackSprite = sGoblinA;
 
-state = "idle";
+hp = 3;

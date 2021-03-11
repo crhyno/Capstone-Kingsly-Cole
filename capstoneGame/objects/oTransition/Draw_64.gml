@@ -5,6 +5,3 @@ if (transMode != "off")
 	
 	draw_rectangle(0, h, w, h - (percent * hHalf), false);
 }
-
-draw_set_color(c_white);
-draw_text(50, 50, string(percent));
