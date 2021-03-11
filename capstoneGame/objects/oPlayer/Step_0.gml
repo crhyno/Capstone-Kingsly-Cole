@@ -119,44 +119,25 @@ switch (state)
 	
 			sprite_index = sPlayerA;
 			
-			ds_list_clear(hitByAttack);
-			mask_index = sPlayerAHB;
-			
-			var hitByAttackNow = ds_list_create();
-			var hits = instance_place_list(x, y, oEnemy, hitByAttackNow, false);
-			
-			if (hits > 0)
-				for (var i = 0; i < hits; i++)
-				{
-					var hitID = ds_list_find_index(hitByAttackNow, i);
-					if (ds_list_find_index(hitByAttackNow, hitID) == -1)
-					{
-						ds_list_add(hitByAttack, hitID);
-						with (hitID) EnemyHit(1);							
-					}
-				}
+			if (PlayerAnimationFrameHit(2,3))
+			{
+				CreateHitbox(x, y, self, sPlayerAHB, 4, 4, 1, image_xscale);
 			}
 			
 			if (key_attack2 == 1) && PlayerAnimationFrameHit(4, 6)
 			{
-				if (image_xscale == 1) {
-				
-					if (!place_meeting(x + 100, y, oWall)) {
-						state = "attack two";
-					}
-				}
-				if (image_xscale == -1) {
-				
-					if (!place_meeting(x - 100, y, oWall)) {
-						state = "attack two";
-					}
-				}
+				state = "attack two";
 			}
 		#endregion
 	break;
 	case "attack two":
 		#region Attack Two State
 		SpriteStateSet(sPlayerA2, 0);
+		
+		if (PlayerAnimationFrameHit(1,2))
+		{
+			CreateHitbox(x, y, self, sPlayerA2HB, 4, 4, 1, image_xscale);
+		}
 		
 		if (key_attack3 == 1) && PlayerAnimationFrameHit(4, 8) {
 			state = "attack three";
@@ -166,6 +147,12 @@ switch (state)
 	break;
 	case "attack three":
 		#region Attack Three State
+		
+		if (PlayerAnimationFrameHit(2,3))
+		{
+			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 3, image_xscale);
+		}
+		
 		SpriteStateSet(sPlayerA3, 0);
 		#endregion
 	break;	

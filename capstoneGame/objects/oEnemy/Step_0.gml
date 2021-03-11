@@ -62,5 +62,17 @@ switch (state) {
 		SpriteStateSet(attackSprite, 0);		
 	#endregion
 	break;
+	
+	case "hit":
+	#region Hit State
+		SpriteStateSet(hitSprite, 0);
+	#endregion
+	break;
+	
+	case "dead":
+	#region Dead State
+		SpriteStateSet(deadState, 0);
+	#endregion
+	break;
 }
 	

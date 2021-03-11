@@ -7,5 +7,7 @@ event_inherited();
 idleSprite = sGoblin;
 chaseSprite = sGoblinR;
 attackSprite = sGoblinA;
+hitSprite = sGoblinH;
+deadSprite = sGoblinD;
 
 hp = 3;

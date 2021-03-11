@@ -2,6 +2,7 @@ idleSprite = sEmpty;
 chaseSprite = sEmpty;
 attackSprite = sEmpty;
 hitSprite = sEmpty;
+deadSprite = sEmpty;
 
 hsp = 0;
 vsp = 0;
