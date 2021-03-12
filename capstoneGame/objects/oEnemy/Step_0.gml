@@ -6,7 +6,12 @@ switch (state) {
 	case "idle":
 	#region Idle State
 	
-		if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) state = "chase";
+		if (!instance_exists(oPlayer)) {
+			hsp = 0;
+			vsp = 0;
+			sprite_index = sGoblin;
+		}
+		else if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) state = "chase";
 		else {	
 			
 			if (atLedge != 1) {
@@ -38,20 +43,23 @@ switch (state) {
 	
 		CheckForEdge(x+hsp + (sprite_width / 2), y+1);
 		
-		if (oPlayer.x > x + chase_range || oPlayer.x < x - chase_range) state = "idle";
-		else if (oPlayer.y > y + chase_rangeY || oPlayer.y < y - chase_rangeY) state = "idle";		
-		else {	
+		if (instance_exists(oPlayer)) 
+		{
+			if (oPlayer.x > x + chase_range || oPlayer.x < x - chase_range) state = "idle";
+			else if (oPlayer.y > y + chase_rangeY || oPlayer.y < y - chase_rangeY) state = "idle";		
+			else {	
 			
-			sprite_index = chaseSprite;																			
-			image_xscale = sign(oPlayer.x - x);
+				sprite_index = chaseSprite;																			
+				image_xscale = sign(oPlayer.x - x);
 		
-			if (image_xscale == 0) image_xscale = -1;
+				if (image_xscale == 0) image_xscale = -1;
 		
-			distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
+				distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 		
-			if (distance_to_player < attack_range) state = "attack";
-			else EnemyMoveAndCollide(image_xscale * walksp, 0);
-		}
+				if (distance_to_player < attack_range) state = "attack";
+				else EnemyMoveAndCollide(image_xscale * walksp, 0);
+			}
+		} else state = "idle";
 
 	
 	#endregion
@@ -59,7 +67,12 @@ switch (state) {
 	
 	case "attack":
 	#region Attack State
-		SpriteStateSet(attackSprite, 0);		
+		SpriteStateSet(attackSprite, 0);
+		
+		if (LifeformAnimationFramesHit(attackFrameHit1, attackFrameHit2))
+		{
+			CreateHitbox(x, y, self, attackHitBoxSprite, 4, 4, 1, image_xscale);
+		}
 	#endregion
 	break;
 	
@@ -71,7 +84,7 @@ switch (state) {
 	
 	case "dead":
 	#region Dead State
-		SpriteStateSet(deadState, 0);
+		SpriteStateSet(deadSprite, 0);
 	#endregion
 	break;
 }

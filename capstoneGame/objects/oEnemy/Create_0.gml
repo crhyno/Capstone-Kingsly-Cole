@@ -1,8 +1,13 @@
 idleSprite = sEmpty;
 chaseSprite = sEmpty;
 attackSprite = sEmpty;
+attackHitBoxSprite = sEmpty;
 hitSprite = sEmpty;
 deadSprite = sEmpty;
+
+attackFrameHit1 = 0;
+attackFrameHit2 = 0;
+attackDamage = 0;
 
 hsp = 0;
 vsp = 0;

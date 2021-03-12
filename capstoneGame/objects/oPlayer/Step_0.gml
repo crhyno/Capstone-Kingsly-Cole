@@ -103,6 +103,7 @@ switch (state)
 			if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
 			{				
 				SpriteStateSet(sPlayerRO, 0);
+				
 				if (image_xscale == -1) x -= 5;
 				if (image_xscale == 1) x += 5;
 				
@@ -111,7 +112,11 @@ switch (state)
 					state = "move";
 				}
 				
-			} else state = "move";
+			} else {
+				state = "move";
+				x -= 2;
+				hsp = 0;
+			}
 		#endregion
 	break;
 	case "attack one":
@@ -119,12 +124,12 @@ switch (state)
 	
 			sprite_index = sPlayerA;
 			
-			if (PlayerAnimationFrameHit(2,3))
+			if (LifeformAnimationFramesHit(3, 4))
 			{
 				CreateHitbox(x, y, self, sPlayerAHB, 4, 4, 1, image_xscale);
 			}
 			
-			if (key_attack2 == 1) && PlayerAnimationFrameHit(4, 6)
+			if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
 			{
 				state = "attack two";
 			}
@@ -134,12 +139,12 @@ switch (state)
 		#region Attack Two State
 		SpriteStateSet(sPlayerA2, 0);
 		
-		if (PlayerAnimationFrameHit(1,2))
+		if (LifeformAnimationFramesHit(1, 2))
 		{
 			CreateHitbox(x, y, self, sPlayerA2HB, 4, 4, 1, image_xscale);
 		}
 		
-		if (key_attack3 == 1) && PlayerAnimationFrameHit(4, 8) {
+		if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
 			state = "attack three";
 		}
 		
@@ -148,7 +153,7 @@ switch (state)
 	case "attack three":
 		#region Attack Three State
 		
-		if (PlayerAnimationFrameHit(2,3))
+		if (LifeformAnimationFramesHit(2,3))
 		{
 			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 3, image_xscale);
 		}
