@@ -100,6 +100,7 @@ switch (state)
 	break;
 	case "roll":
 		#region Roll State
+	
 			if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
 			{				
 				SpriteStateSet(sPlayerRO, 0);
@@ -124,9 +125,9 @@ switch (state)
 	
 			sprite_index = sPlayerA;
 			
-			if (LifeformAnimationFramesHit(3, 4))
+			if (AnimationFrameHit(3))
 			{
-				CreateHitbox(x, y, self, sPlayerAHB, 4, 4, 1, image_xscale);
+				CreateHitbox(x, y, self, sPlayerAHB, 4, 5, 4, image_xscale);
 			}
 			
 			if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
@@ -139,9 +140,9 @@ switch (state)
 		#region Attack Two State
 		SpriteStateSet(sPlayerA2, 0);
 		
-		if (LifeformAnimationFramesHit(1, 2))
+		if (AnimationFrameHit(2))
 		{
-			CreateHitbox(x, y, self, sPlayerA2HB, 4, 4, 1, image_xscale);
+			CreateHitbox(x, y, self, sPlayerA2HB, 4, 5, 4, image_xscale);
 		}
 		
 		if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
@@ -153,9 +154,9 @@ switch (state)
 	case "attack three":
 		#region Attack Three State
 		
-		if (LifeformAnimationFramesHit(2,3))
+		if (AnimationFrameHit(3))
 		{
-			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 3, image_xscale);
+			CreateHitbox(x, y, self, sPlayerA3HB, 4, 8, 4, image_xscale);
 		}
 		
 		SpriteStateSet(sPlayerA3, 0);

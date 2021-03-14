@@ -1,3 +1,2 @@
 if (creator == noone || creator == other) exit;
-
-instance_destroy(other);
+else other.hp -= damage;

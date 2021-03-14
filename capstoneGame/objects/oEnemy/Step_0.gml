@@ -10,6 +10,7 @@ switch (state) {
 			hsp = 0;
 			vsp = 0;
 			sprite_index = sGoblin;
+			SlideTransition("restart");
 		}
 		else if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) state = "chase";
 		else {	
@@ -69,9 +70,9 @@ switch (state) {
 	#region Attack State
 		SpriteStateSet(attackSprite, 0);
 		
-		if (LifeformAnimationFramesHit(attackFrameHit1, attackFrameHit2))
+		if (AnimationFrameHit(attackFrameHit))
 		{
-			CreateHitbox(x, y, self, attackHitBoxSprite, 4, 4, 1, image_xscale);
+			CreateHitbox(x, y, self, attackHitBoxSprite, 4, damage, 4, image_xscale);
 		}
 	#endregion
 	break;

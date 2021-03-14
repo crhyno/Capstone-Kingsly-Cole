@@ -1,3 +1,5 @@
+event_inherited()
+
 idleSprite = sEmpty;
 chaseSprite = sEmpty;
 attackSprite = sEmpty;
@@ -5,9 +7,7 @@ attackHitBoxSprite = sEmpty;
 hitSprite = sEmpty;
 deadSprite = sEmpty;
 
-attackFrameHit1 = 0;
-attackFrameHit2 = 0;
-attackDamage = 0;
+attackFrameHit = 0;
 
 hsp = 0;
 vsp = 0;
@@ -24,6 +24,5 @@ afraidOfHeights = 1;
 atLedge = 0;
 facingLedge = 0;
 
-hp = 0;
 state = "idle";
 

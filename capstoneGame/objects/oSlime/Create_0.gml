@@ -4,14 +4,15 @@
 // Inherit the parent event
 event_inherited();
 
-idleSprite = sGoblin;
-chaseSprite = sGoblinR;
-attackSprite = sGoblinA;
-attackHitBoxSprite = sGoblinAHB
-hitSprite = sGoblinH;
+idleSprite = sSlime;
+chaseSprite = sSlimeR;
+attackSprite = sSlimeA;
+attackHitBoxSprite = sSlimeAHB
+hitSprite = sSlimeH;
 deadSprite = sGoblinD;
 
 attackFrameHit = 6;
 
 hp = 10;
 damage = 3;
+
