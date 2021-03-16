@@ -123,17 +123,17 @@ switch (state)
 	case "attack one":
 		#region Attack One State	
 	
-			sprite_index = sPlayerA;
+		SpriteStateSet(sPlayerA, 0);
 			
-			if (AnimationFrameHit(3))
-			{
-				CreateHitbox(x, y, self, sPlayerAHB, 4, 5, 4, image_xscale);
-			}
+		if (AnimationFrameHit(2))
+		{
+			CreateHitbox(x, y, self, sPlayerAHB, 4, 4, 5, image_xscale);
+		}
 			
-			if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
-			{
-				state = "attack two";
-			}
+		if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
+		{
+			state = "attack two";
+		}
 		#endregion
 	break;
 	case "attack two":
@@ -142,7 +142,7 @@ switch (state)
 		
 		if (AnimationFrameHit(2))
 		{
-			CreateHitbox(x, y, self, sPlayerA2HB, 4, 5, 4, image_xscale);
+			CreateHitbox(x, y, self, sPlayerA2HB, 4, 4, 5, image_xscale);
 		}
 		
 		if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
@@ -156,7 +156,7 @@ switch (state)
 		
 		if (AnimationFrameHit(3))
 		{
-			CreateHitbox(x, y, self, sPlayerA3HB, 4, 8, 4, image_xscale);
+			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 8, image_xscale);
 		}
 		
 		SpriteStateSet(sPlayerA3, 0);

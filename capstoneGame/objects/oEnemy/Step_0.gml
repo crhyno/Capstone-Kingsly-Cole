@@ -72,7 +72,7 @@ switch (state) {
 		
 		if (AnimationFrameHit(attackFrameHit))
 		{
-			CreateHitbox(x, y, self, attackHitBoxSprite, 4, damage, 4, image_xscale);
+			CreateHitbox(x, y, self, attackHitBoxSprite, 4, 2, 0, image_xscale);
 		}
 	#endregion
 	break;

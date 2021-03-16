@@ -12,6 +12,4 @@ hitSprite = sGoblinH;
 deadSprite = sGoblinD;
 
 attackFrameHit = 6;
-
-hp = 10;
-damage = 3;
+hp = 25;

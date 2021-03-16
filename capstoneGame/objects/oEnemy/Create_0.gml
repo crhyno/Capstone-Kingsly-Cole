@@ -1,4 +1,4 @@
-event_inherited()
+event_inherited();
 
 idleSprite = sEmpty;
 chaseSprite = sEmpty;
@@ -8,6 +8,7 @@ hitSprite = sEmpty;
 deadSprite = sEmpty;
 
 attackFrameHit = 0;
+hp = 25;
 
 hsp = 0;
 vsp = 0;

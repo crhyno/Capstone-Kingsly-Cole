@@ -8,5 +8,3 @@ walksp = 5;
 state = "move";
 hasControl = 1;
 
-hp = 100;
-
