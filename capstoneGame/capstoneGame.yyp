@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"GrassLevel3","path":"rooms/GrassLevel3/GrassLevel3.yy",},"order":2,},
     {"id":{"name":"sGoblinA","path":"sprites/sGoblinA/sGoblinA.yy",},"order":2,},
     {"id":{"name":"oTransition","path":"objects/oTransition/oTransition.yy",},"order":2,},
     {"id":{"name":"EnemyMoveAndCollide","path":"scripts/EnemyMoveAndCollide/EnemyMoveAndCollide.yy",},"order":0,},
@@ -18,6 +19,7 @@
     {"id":{"name":"sWoodTiles","path":"sprites/sWoodTiles/sWoodTiles.yy",},"order":1,},
     {"id":{"name":"sGoblin","path":"sprites/sGoblin/sGoblin.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":3,},
+    {"id":{"name":"GrassLevel4","path":"rooms/GrassLevel4/GrassLevel4.yy",},"order":3,},
     {"id":{"name":"tBackWoodTiles","path":"tilesets/tBackWoodTiles/tBackWoodTiles.yy",},"order":2,},
     {"id":{"name":"sGoblinAHB","path":"sprites/sGoblinAHB/sGoblinAHB.yy",},"order":3,},
     {"id":{"name":"tWoodTiles","path":"tilesets/tWoodTiles/tWoodTiles.yy",},"order":1,},
@@ -25,11 +27,11 @@
     {"id":{"name":"AnimationFrameHit","path":"scripts/AnimationFrameHit/AnimationFrameHit.yy",},"order":4,},
     {"id":{"name":"sSlimeR","path":"sprites/sSlimeR/sSlimeR.yy",},"order":1,},
     {"id":{"name":"sTrigger","path":"sprites/sTrigger/sTrigger.yy",},"order":4,},
+    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":11,},
     {"id":{"name":"sPlayerA2HB","path":"sprites/sPlayerA2HB/sPlayerA2HB.yy",},"order":15,},
     {"id":{"name":"sPlayerA2","path":"sprites/sPlayerA2/sPlayerA2.yy",},"order":13,},
     {"id":{"name":"sGoblinH","path":"sprites/sGoblinH/sGoblinH.yy",},"order":4,},
     {"id":{"name":"sPlayerAHB","path":"sprites/sPlayerAHB/sPlayerAHB.yy",},"order":17,},
-    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},
     {"id":{"name":"sPlayerA3","path":"sprites/sPlayerA3/sPlayerA3.yy",},"order":16,},
     {"id":{"name":"sPlayerJ","path":"sprites/sPlayerJ/sPlayerJ.yy",},"order":10,},
     {"id":{"name":"sEmpty","path":"sprites/sEmpty/sEmpty.yy",},"order":5,},
@@ -43,6 +45,7 @@
     {"id":{"name":"sGoblinD","path":"sprites/sGoblinD/sGoblinD.yy",},"order":5,},
     {"id":{"name":"sSlimeH","path":"sprites/sSlimeH/sSlimeH.yy",},"order":4,},
     {"id":{"name":"sWoodTiles2","path":"sprites/sWoodTiles2/sWoodTiles2.yy",},"order":2,},
+    {"id":{"name":"GrassLevel5","path":"rooms/GrassLevel5/GrassLevel5.yy",},"order":4,},
     {"id":{"name":"Collision","path":"scripts/Collision/Collision.yy",},"order":0,},
     {"id":{"name":"GrassLevel2","path":"rooms/GrassLevel2/GrassLevel2.yy",},"order":1,},
     {"id":{"name":"sGoblinR","path":"sprites/sGoblinR/sGoblinR.yy",},"order":1,},
@@ -69,6 +72,9 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"GrassLevel1","path":"rooms/GrassLevel1/GrassLevel1.yy",},},
     {"roomId":{"name":"GrassLevel2","path":"rooms/GrassLevel2/GrassLevel2.yy",},},
+    {"roomId":{"name":"GrassLevel3","path":"rooms/GrassLevel3/GrassLevel3.yy",},},
+    {"roomId":{"name":"GrassLevel4","path":"rooms/GrassLevel4/GrassLevel4.yy",},},
+    {"roomId":{"name":"GrassLevel5","path":"rooms/GrassLevel5/GrassLevel5.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

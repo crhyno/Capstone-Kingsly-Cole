@@ -105,8 +105,8 @@ switch (state)
 			{				
 				SpriteStateSet(sPlayerRO, 0);
 				
-				if (image_xscale == -1) x -= 5;
-				if (image_xscale == 1) x += 5;
+				if (image_xscale == -1) x -= 7;
+				if (image_xscale == 1) x += 7;
 				
 				if (!place_meeting(x,y + 50,oWall)) 
 				{
