@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-walksp = 5;
+walksp = 6;
 
 idleSprite = sSlime;
 chaseSprite = sSlimeR;
