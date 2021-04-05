@@ -32,6 +32,7 @@ switch (state)
 			if (place_meeting(x, y+1, oWall)) && (key_jump)
 			{
 				vsp = -10;
+				audio_play_sound(mJump,100,0)
 			}
 
 			//Horizontal collision
@@ -88,6 +89,7 @@ switch (state)
 							image_index = 0;
 						}
 					}
+					audio_play_sound(mSwordFast,500,0)
 				}
 				if (key_roll == 1) {
 					image_index = 0;
@@ -143,6 +145,7 @@ switch (state)
 		if (AnimationFrameHit(2))
 		{
 			CreateHitbox(x, y, self, sPlayerA2HB, 4, 4, 5, image_xscale);
+			audio_play_sound(mSwordFast,550,0)
 		}
 		
 		if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
@@ -157,6 +160,7 @@ switch (state)
 		if (AnimationFrameHit(3))
 		{
 			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 8, image_xscale);
+			audio_play_sound(mSwordHeavy,700,0)
 		}
 		
 		SpriteStateSet(sPlayerA3, 0);
