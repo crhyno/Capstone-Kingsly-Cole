@@ -13,5 +13,6 @@ attackHitBoxSprite = sMushroomAHB;
 
 attack_range = 90;
 attackFrameHit = 6;
-hp = 25;
-damage = 5;
+
+hp = 15;
+damage = 8;

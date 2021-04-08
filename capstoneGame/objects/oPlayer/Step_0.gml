@@ -132,7 +132,7 @@ switch (state)
 			
 		if (AnimationFrameHit(2))
 		{
-			CreateHitbox(x, y, self, sPlayerAHB, 4, 4, 5, image_xscale);
+			CreateHitbox(x, y, self, sPlayerAHB, 4, 1, 5, image_xscale);
 			audio_play_sound(mSwordFast,500,0)
 		}
 			
@@ -148,7 +148,7 @@ switch (state)
 		
 		if (AnimationFrameHit(2))
 		{
-			CreateHitbox(x, y, self, sPlayerA2HB, 4, 4, 5, image_xscale);
+			CreateHitbox(x, y, self, sPlayerA2HB, 4, 1, 5, image_xscale);
 			audio_play_sound(mSwordFast,550,0)
 		}
 		
@@ -165,7 +165,7 @@ switch (state)
 		
 		if (AnimationFrameHit(3))
 		{
-			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 8, image_xscale);
+			CreateHitbox(x, y, self, sPlayerA3HB, 4, 1, 8, image_xscale);
 			audio_play_sound(mSwordHeavy,700,0)
 		}
 		

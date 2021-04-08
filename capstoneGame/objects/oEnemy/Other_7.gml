@@ -6,8 +6,13 @@ if (state == "attack")
 		
 		if (distance_to_player > attack_range) state = "chase";
 		else {
+			image_index = 0;
 			state = "attack";
 		}
-	} else state = "idle";
+	} else {
+		
+		image_index = 0;
+		state = "idle";
+	}
 	
 }

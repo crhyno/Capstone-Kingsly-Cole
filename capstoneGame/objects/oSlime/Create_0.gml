@@ -16,5 +16,6 @@ deadSprite = sGoblinD;
 attack_range = 85;
 attackFrameHit = 6;
 
-hp = 10;
+hp = 5;
+damage = 3;
 

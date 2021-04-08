@@ -41,7 +41,6 @@ switch (state) {
 	
 	case "chase":
 	#region Chase State
-	
 		
 		if (instance_exists(oPlayer)) 
 		{
@@ -62,7 +61,6 @@ switch (state) {
 				else EnemyMoveAndCollide(image_xscale * walksp, 0);
 			}
 		} else {			
-			vsp = 0;
 			state = "idle";
 		}
 
@@ -76,7 +74,7 @@ switch (state) {
 		
 		if (AnimationFrameHit(attackFrameHit))
 		{
-			CreateHitbox(x, y, self, attackHitBoxSprite, 4, 2, damage, image_xscale);
+			CreateHitbox(x, y, self, attackHitBoxSprite, 4, 1, damage, image_xscale);
 		}
 	#endregion
 	break;

@@ -15,5 +15,7 @@ deadSprite = sSkeletonD;
 
 attack_range = 140;
 attackFrameHit = 3;
+
 hp = 10;
+damage = 5;
 
