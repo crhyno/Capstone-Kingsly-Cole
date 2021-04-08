@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-walksp = 4;
+walksp = 4
 
 idleSprite = sSkeleton;
 chaseSprite = sSkeletonR;
@@ -13,6 +13,7 @@ attackHitBoxSprite = sSkeletonAHB;
 hitSprite = sSkeletonH;
 deadSprite = sSkeletonD;
 
-attack_range = 120;
-attackFrameHit = 6;
+attack_range = 140;
+attackFrameHit = 3;
+hp = 10;
 

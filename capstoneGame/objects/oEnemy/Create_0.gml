@@ -9,6 +9,7 @@ deadSprite = sEmpty;
 
 attackFrameHit = 0;
 hp = 25;
+damage = 0;
 
 hsp = 0;
 vsp = 0;

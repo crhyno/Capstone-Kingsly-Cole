@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+walksp = 4
+
 idleSprite = sGoblin;
 chaseSprite = sGoblinR;
 attackSprite = sGoblinA;

@@ -9,19 +9,13 @@ switch (state) {
 		if (!instance_exists(oPlayer)) {
 			hsp = 0;
 			vsp = 0;
-			sprite_index = sGoblin;
+			sprite_index = idleSprite;
 			SlideTransition("restart");
 		}
 		else if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) state = "chase";
 		else {	
 			
-			if (atLedge != 1) {
-				if (oPlayer.x <= x + chase_range || oPlayer.x <= x - chase_range) state = "chase";
-				if (oPlayer.y <= y - chase_rangeY || oPlayer.y <= y + chase_rangeY) state = "chase";
-				else state = "idle";
-			}
-						
-			sprite_index = idleSprite;
+			SpriteStateSet(idleSprite, 0);
 			image_xscale = sign(oPlayer.x - x);
 		
 			if (image_xscale == 0) image_xscale = -1;
@@ -31,9 +25,14 @@ switch (state) {
 			{
 				Collision(x, y+vsp);
 				vsp = 0;
-
 			}
 			y = y + vsp;
+			
+			if (atLedge != 1) {
+				if (oPlayer.x <= x + chase_range || oPlayer.x <= x - chase_range) state = "chase";
+				else if (oPlayer.y <= y - chase_rangeY || oPlayer.y <= y + chase_rangeY) state = "chase";
+				else state = "idle";
+			}
 		}
 				
 	#endregion
@@ -50,7 +49,7 @@ switch (state) {
 			else if (oPlayer.y > y + chase_rangeY || oPlayer.y < y - chase_rangeY) state = "idle";		
 			else {	
 			
-				sprite_index = chaseSprite;																			
+				SpriteStateSet(chaseSprite, 0)																		
 				image_xscale = sign(oPlayer.x - x);
 		
 				if (image_xscale == 0) image_xscale = -1;
@@ -60,7 +59,10 @@ switch (state) {
 				if (distance_to_player < attack_range) state = "attack";
 				else EnemyMoveAndCollide(image_xscale * walksp, 0);
 			}
-		} else state = "idle";
+		} else {
+			atLedge = 0;
+			state = "idle";
+		}
 
 	
 	#endregion

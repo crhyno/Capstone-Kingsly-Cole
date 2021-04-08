@@ -1,1 +1,1 @@
-targetLevel = GrassLevel3;
+targetLevel = GrassLevel2;

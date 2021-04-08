@@ -102,24 +102,28 @@ switch (state)
 	break;
 	case "roll":
 		#region Roll State
+		
+		SpriteStateSet(sPlayerRO, 0);
 	
-			if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
-			{				
-				SpriteStateSet(sPlayerRO, 0);
+		if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
+		{				
 				
-				if (image_xscale == -1) x -= 7;
-				if (image_xscale == 1) x += 7;
+			if (image_xscale == -1) x -= 7;
+			if (image_xscale == 1) x += 7;
 				
-				if (!place_meeting(x,y + 50,oWall)) 
-				{
-					state = "move";
-				}
-				
-			} else {
+			if (!place_meeting(x,y + 50,oWall)) 
+			{
 				state = "move";
-				x -= 2;
-				hsp = 0;
 			}
+			
+			if (AnimationFrameHit(8)) state = "move";
+				
+		} else {
+			state = "move";
+			if (image_xscale == -1) x += 2;
+			if (image_xscale == 1) x -= 2; 
+			hsp = 0;
+		}
 		#endregion
 	break;
 	case "attack one":
@@ -157,13 +161,14 @@ switch (state)
 	case "attack three":
 		#region Attack Three State
 		
+		SpriteStateSet(sPlayerA3, 0);
+		
 		if (AnimationFrameHit(3))
 		{
 			CreateHitbox(x, y, self, sPlayerA3HB, 4, 4, 8, image_xscale);
 			audio_play_sound(mSwordHeavy,700,0)
 		}
 		
-		SpriteStateSet(sPlayerA3, 0);
 		#endregion
 	break;	
 		
