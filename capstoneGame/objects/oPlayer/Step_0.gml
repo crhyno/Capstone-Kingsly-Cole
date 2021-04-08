@@ -28,6 +28,7 @@ switch (state)
 	case "move":
 		#region Move State
 	
+			image_speed = 1;
 			//Jumping
 			if (place_meeting(x, y+1, oWall)) && (key_jump)
 			{
@@ -107,8 +108,9 @@ switch (state)
 		if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
 		{				
 				
-			if (image_xscale == -1) x -= 7;
-			if (image_xscale == 1) x += 7;
+			image_speed = 1.5;
+			if (image_xscale == -1) x -= 6;
+			if (image_xscale == 1) x += 6;
 				
 			if (!place_meeting(x,y + 50,oWall)) 
 			{
