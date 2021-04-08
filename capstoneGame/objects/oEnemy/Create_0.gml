@@ -9,7 +9,7 @@ deadSprite = sEmpty;
 
 attackFrameHit = 0;
 hp = 25;
-damage = 0;
+damage = 5;
 
 hsp = 0;
 vsp = 0;
@@ -19,7 +19,6 @@ dir = -1;
 
 distance_to_player = 0;
 chase_range = 400;
-chase_rangeY = 150;
 attack_range = 120;
 
 afraidOfHeights = 1;

@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8cc1d2a0-6be2-4e98-831b-b434d9e87a89","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Goblin",
     "path": "folders/Sprites/Enemies/Goblin.yy",

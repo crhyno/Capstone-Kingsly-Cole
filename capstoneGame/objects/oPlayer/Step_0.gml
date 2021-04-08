@@ -89,7 +89,6 @@ switch (state)
 							image_index = 0;
 						}
 					}
-					audio_play_sound(mSwordFast,500,0)
 				}
 				if (key_roll == 1) {
 					image_index = 0;
@@ -134,6 +133,7 @@ switch (state)
 		if (AnimationFrameHit(2))
 		{
 			CreateHitbox(x, y, self, sPlayerAHB, 4, 4, 5, image_xscale);
+			audio_play_sound(mSwordFast,500,0)
 		}
 			
 		if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
