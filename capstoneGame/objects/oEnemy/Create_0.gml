@@ -8,8 +8,10 @@ hitSprite = sEmpty;
 deadSprite = sEmpty;
 
 attackFrameHit = 0;
+hitFrame = 0;
 hp = 25;
 damage = 5;
+knockbackDistance = 40;
 
 hsp = 0;
 vsp = 0;
@@ -18,7 +20,8 @@ walksp = 3;
 dir = -1;
 
 distance_to_player = 0;
-chase_range = 400;
+chase_range = 300;
+chase_rangeY = 100;
 attack_range = 120;
 
 afraidOfHeights = 1;

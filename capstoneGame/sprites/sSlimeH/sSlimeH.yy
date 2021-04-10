@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 9,
@@ -8,7 +8,7 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 5,
-  "bbox_right": 67,
+  "bbox_right": 55,
   "bbox_top": 20,
   "bbox_bottom": 52,
   "HTile": false,
@@ -41,7 +41,7 @@
     "spriteId": {"name":"sSlimeH","path":"sprites/sSlimeH/sSlimeH.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fbd678a8-1535-4807-a327-472fe2b9b9c3","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Slime",
     "path": "folders/Sprites/Enemies/Slime.yy",

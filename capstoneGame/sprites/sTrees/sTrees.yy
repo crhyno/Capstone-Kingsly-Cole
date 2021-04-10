@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 299,
-  "bbox_top": 18,
-  "bbox_bottom": 187,
+  "bbox_right": 249,
+  "bbox_top": 15,
+  "bbox_bottom": 156,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 300,
-  "height": 188,
+  "width": 250,
+  "height": 157,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"94c92867-1664-4ae8-8552-646d84667f8d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":85.0,"displayName":"default","resourceVersion":"1.0","name":"94c92867-1664-4ae8-8552-646d84667f8d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

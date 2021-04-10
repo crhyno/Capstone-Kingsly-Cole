@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 9,
@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 2,
-  "bbox_right": 69,
-  "bbox_top": 18,
+  "bbox_left": 7,
+  "bbox_right": 63,
+  "bbox_top": 25,
   "bbox_bottom": 52,
   "HTile": false,
   "VTile": false,
@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ec5bda2d-3bdd-4181-97e8-b775d3962810","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Slime",
     "path": "folders/Sprites/Enemies/Slime.yy",

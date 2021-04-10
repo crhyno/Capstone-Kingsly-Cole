@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 70,
-  "height": 62,
+  "width": 74,
+  "height": 66,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -41,7 +41,7 @@
     "spriteId": {"name":"sGoblinH","path":"sprites/sGoblinH/sGoblinH.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 6.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -66,8 +66,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 35,
-    "yorigin": 15,
+    "xorigin": 30,
+    "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sGoblinH","path":"sprites/sGoblinH/sGoblinH.yy",},
@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2325b0a8-358a-46e2-935b-630855953dcd","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Goblin",
     "path": "folders/Sprites/Enemies/Goblin.yy",

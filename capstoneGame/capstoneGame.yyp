@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"Knockback","path":"scripts/Knockback/Knockback.yy",},"order":9,},
     {"id":{"name":"GrassLevel3","path":"rooms/GrassLevel3/GrassLevel3.yy",},"order":2,},
     {"id":{"name":"sGoblinA","path":"sprites/sGoblinA/sGoblinA.yy",},"order":2,},
     {"id":{"name":"oTransition","path":"objects/oTransition/oTransition.yy",},"order":2,},
@@ -35,6 +36,7 @@
     {"id":{"name":"sGoblinAHB","path":"sprites/sGoblinAHB/sGoblinAHB.yy",},"order":3,},
     {"id":{"name":"sClouds","path":"sprites/sClouds/sClouds.yy",},"order":1,},
     {"id":{"name":"tWoodTiles","path":"tilesets/tWoodTiles/tWoodTiles.yy",},"order":1,},
+    {"id":{"name":"Approach","path":"scripts/Approach/Approach.yy",},"order":8,},
     {"id":{"name":"mGrasslands","path":"sounds/mGrasslands/mGrasslands.yy",},"order":0,},
     {"id":{"name":"sTrees","path":"sprites/sTrees/sTrees.yy",},"order":4,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":8,},
@@ -52,8 +54,8 @@
     {"id":{"name":"fGUI","path":"fonts/fGUI/fGUI.yy",},"order":0,},
     {"id":{"name":"sGoblinH","path":"sprites/sGoblinH/sGoblinH.yy",},"order":4,},
     {"id":{"name":"sMushroomR","path":"sprites/sMushroomR/sMushroomR.yy",},"order":1,},
-    {"id":{"name":"sSky","path":"sprites/sSky/sSky.yy",},"order":2,},
     {"id":{"name":"tSnowTiles2","path":"tilesets/tSnowTiles2/tSnowTiles2.yy",},"order":4,},
+    {"id":{"name":"sPlayerH","path":"sprites/sPlayerH/sPlayerH.yy",},"order":20,},
     {"id":{"name":"sPlayerAHB","path":"sprites/sPlayerAHB/sPlayerAHB.yy",},"order":17,},
     {"id":{"name":"sPlayerA3","path":"sprites/sPlayerA3/sPlayerA3.yy",},"order":16,},
     {"id":{"name":"oMushroom","path":"objects/oMushroom/oMushroom.yy",},"order":4,},

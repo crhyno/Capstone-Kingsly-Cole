@@ -99,79 +99,107 @@ switch (state)
 			
 		
 		#endregion
-	break;
+		break;
+		
 	case "roll":
 		#region Roll State
 		
-		SpriteStateSet(sPlayerRO, 0);
+			SpriteStateSet(sPlayerRO, 0);
 	
-		if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
-		{				
+			if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
+			{				
 				
-			image_speed = 1.5;
-			if (image_xscale == -1) x -= 6;
-			if (image_xscale == 1) x += 6;
+				image_speed = 1.5;
+				if (image_xscale == -1) x -= 6;
+				if (image_xscale == 1) x += 6;
 				
-			if (!place_meeting(x,y + 50,oWall)) 
-			{
-				state = "move";
-			}
+				if (!place_meeting(x,y + 50,oWall)) 
+				{
+					state = "move";
+				}
 			
-			if (AnimationFrameHit(8)) state = "move";
+				if (AnimationFrameHit(8)) state = "move";
 				
-		} else {
-			state = "move";
-			if (image_xscale == -1) x += 2;
-			if (image_xscale == 1) x -= 2; 
-			hsp = 0;
-		}
+			} else {
+				state = "move";
+				if (image_xscale == -1) x += 2;
+				if (image_xscale == 1) x -= 2; 
+				hsp = 0;
+			}
 		#endregion
-	break;
+		break;
+		
 	case "attack one":
 		#region Attack One State	
 	
-		SpriteStateSet(sPlayerA, 0);
+			SpriteStateSet(sPlayerA, 0);
 			
-		if (AnimationFrameHit(2))
-		{
-			CreateHitbox(x, y, self, sPlayerAHB, 4, 1, 5, image_xscale);
-			audio_play_sound(mSwordFast,500,0)
-		}
+			if (AnimationFrameHit(2))
+			{
+				CreateHitbox(x, y, self, sPlayerAHB, 24, 1, 5, image_xscale);
+				audio_play_sound(mSwordFast,500,0)
+			}
 			
-		if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
-		{
-			state = "attack two";
-		}
+			if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
+			{
+				state = "attack two";
+			}
 		#endregion
-	break;
+		break;
+	
 	case "attack two":
 		#region Attack Two State
-		SpriteStateSet(sPlayerA2, 0);
 		
-		if (AnimationFrameHit(2))
-		{
-			CreateHitbox(x, y, self, sPlayerA2HB, 4, 1, 5, image_xscale);
-			audio_play_sound(mSwordFast,550,0)
-		}
+			SpriteStateSet(sPlayerA2, 0);
 		
-		if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
-			state = "attack three";
-		}
+			if (AnimationFrameHit(2))
+			{
+				CreateHitbox(x, y, self, sPlayerA2HB, 24, 1, 5, image_xscale);
+				audio_play_sound(mSwordFast,550,0)
+			}
+		
+			if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
+				state = "attack three";
+			}
 		
 		#endregion
-	break;
+		break;
+	
 	case "attack three":
 		#region Attack Three State
 		
-		SpriteStateSet(sPlayerA3, 0);
+			SpriteStateSet(sPlayerA3, 0);
 		
-		if (AnimationFrameHit(3))
-		{
-			CreateHitbox(x, y, self, sPlayerA3HB, 4, 1, 8, image_xscale);
-			audio_play_sound(mSwordHeavy,700,0)
-		}
+			if (AnimationFrameHit(3))
+			{
+				CreateHitbox(x, y, self, sPlayerA3HB, 40, 1, 8, image_xscale);
+				audio_play_sound(mSwordHeavy,700,0)
+			}
 		
 		#endregion
-	break;	
+		break;
 		
+	case "hit":
+		#region Hit State
+		
+			SpriteStateSet(sPlayerH, 0);
+			
+			EnemyMoveAndCollide(knockback_speed , 0);
+			knockback_speed = Approach(knockback_speed, 0, 0.5);
+			
+			if (knockback_speed == 0) 
+			{
+				if (AnimationFrameHit(2)) {
+					knockback_speed = 0;
+					state = "move";
+				}
+			}
+		
+		#endregion
+		break;
+	
+	default:
+		show_debug_message("State " + state + " does not exsist");
+		state = "move";
+		break;
 }

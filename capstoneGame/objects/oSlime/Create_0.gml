@@ -11,11 +11,12 @@ chaseSprite = sSlimeR;
 attackSprite = sSlimeA;
 attackHitBoxSprite = sSlimeAHB
 hitSprite = sSlimeH;
-deadSprite = sGoblinD;
+deadSprite = sSlimeD;
 
+attackFrameHit = 3;
+hitFrame = 3;
 attack_range = 85;
-attackFrameHit = 6;
 
-hp = 5;
-damage = 3;
+hp = 10;
+damage = 2;
 

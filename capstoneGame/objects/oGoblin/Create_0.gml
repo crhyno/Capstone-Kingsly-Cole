@@ -14,7 +14,9 @@ hitSprite = sGoblinH;
 deadSprite = sGoblinD;
 
 attackFrameHit = 6;
+hitFrame = 3;
 attack_range = 110;
 
 hp = 10;
 damage = 3;
+knockbackDistance = 60;

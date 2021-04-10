@@ -17,9 +17,13 @@ camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
 
 if (layer_exists("Trees")) 
 {
-	layer_x("Trees", x / 8);
+	layer_x("Trees", x / 2);
 }
 if (layer_exists("Mountains")) 
 {
-	layer_x("Mountains", x / 16);
+	layer_x("Mountains", x);
+}
+if (layer_exists("Clouds")) 
+{
+	layer_x("Clouds", x);
 }

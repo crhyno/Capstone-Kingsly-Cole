@@ -3,3 +3,6 @@ if (creator == noone || creator == other || ds_list_find_index(hit_objects, othe
 other.hp -= damage;
 audio_play_sound(mHit,500,0);
 ds_list_add(hit_objects, other);
+
+other.state = "hit";
+other.knockback_speed = knockback * image_xscale;

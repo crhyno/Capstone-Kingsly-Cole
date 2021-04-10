@@ -14,7 +14,9 @@ hitSprite = sSkeletonH;
 deadSprite = sSkeletonD;
 
 attack_range = 140;
+hitFrame = 2;
 attackFrameHit = 3;
+knockbackDistance = 200;
 
 hp = 10;
 damage = 5;
