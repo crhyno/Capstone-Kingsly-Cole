@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sMushroom",
+    "path": "sprites/sMushroom/sMushroom.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oEnemy",

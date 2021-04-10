@@ -126,6 +126,7 @@ switch (state)
 				if (image_xscale == 1) x -= 2; 
 				hsp = 0;
 			}
+			
 		#endregion
 		break;
 		

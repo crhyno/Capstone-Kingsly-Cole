@@ -25,9 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4c1b1170-d75f-4a9c-81bc-068cc697a3a8","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4c1b1170-d75f-4a9c-81bc-068cc697a3a8","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"LayerId":{"name":"de8e1c3a-debc-4514-9003-653313f13aab","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4c1b1170-d75f-4a9c-81bc-068cc697a3a8","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"LayerId":{"name":"49919ca1-837f-411b-a013-b75a8fe7387e","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4c1b1170-d75f-4a9c-81bc-068cc697a3a8","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"LayerId":{"name":"c6bfbe1b-1e8f-4d66-9d69-f7f232625882","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4c1b1170-d75f-4a9c-81bc-068cc697a3a8","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"LayerId":{"name":"de8e1c3a-debc-4514-9003-653313f13aab","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sSkeletonAHB","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},"resourceVersion":"1.0","name":"4c1b1170-d75f-4a9c-81bc-068cc697a3a8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -56,8 +55,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 110,
-    "yorigin": 129,
+    "xorigin": 25,
+    "yorigin": 38,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSkeletonAHB","path":"sprites/sSkeletonAHB/sSkeletonAHB.yy",},
@@ -70,6 +69,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"c6bfbe1b-1e8f-4d66-9d69-f7f232625882","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"de8e1c3a-debc-4514-9003-653313f13aab","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Skeleton",
     "path": "folders/Sprites/Enemies/Skeleton.yy",

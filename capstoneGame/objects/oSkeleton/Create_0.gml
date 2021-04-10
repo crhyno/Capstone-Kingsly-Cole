@@ -13,11 +13,11 @@ attackHitBoxSprite = sSkeletonAHB;
 hitSprite = sSkeletonH;
 deadSprite = sSkeletonD;
 
-attack_range = 140;
+attack_range = 130;
 hitFrame = 2;
 attackFrameHit = 3;
-knockbackDistance = 200;
 
 hp = 10;
 damage = 5;
+knockbackDistance = 60;
 

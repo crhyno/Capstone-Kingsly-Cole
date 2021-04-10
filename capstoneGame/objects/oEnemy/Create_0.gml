@@ -21,7 +21,6 @@ dir = -1;
 
 distance_to_player = 0;
 chase_range = 300;
-chase_rangeY = 100;
 attack_range = 120;
 
 afraidOfHeights = 1;
