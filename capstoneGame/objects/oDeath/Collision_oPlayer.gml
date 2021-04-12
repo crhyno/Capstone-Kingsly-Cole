@@ -6,4 +6,4 @@ with (oPlayer)
 		SlideTransition("goTo", other.targetLevel);
 	}
 }
-audio_stop_all()
+audio_stop_all();
