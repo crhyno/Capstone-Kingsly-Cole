@@ -19,5 +19,5 @@ attackFrameHit = 3;
 
 hp = 10;
 damage = 5;
-knockbackDistance = 60;
+knockbackDistance = 12;
 

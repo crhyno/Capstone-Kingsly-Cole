@@ -6,6 +6,7 @@ switch (state) {
 	case "idle":
 		#region Idle State
 	
+			//If the player deos not exist, restart game
 			if (!instance_exists(oPlayer)) {
 				hsp = 0;
 				vsp = 0;
@@ -14,6 +15,7 @@ switch (state) {
 			}
 			else {	
 			
+				//Sets sprite and frame, direction depending on where player is
 				SpriteStateSet(idleSprite, 0);
 				image_xscale = sign(oPlayer.x - x);
 		
@@ -28,7 +30,11 @@ switch (state) {
 				y = y + vsp;
 			
 			
+				//Checks to see if the enemy is at a ledge and if the player is the opposite direction of
+				// the direction of the ledge, if so set state to chase
 				if (atLedge == 1 && facingLedge != sign(oPlayer.x - x)) state = "chase";
+				//if the enemy is not at a ledge and the distance to the player is less than the chase range,
+				// set the state to chase
 				else if (atLedge != 1) {
 				
 					distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
@@ -42,14 +48,18 @@ switch (state) {
 	case "chase":
 		#region Chase State
 		
+			//If the player exists
 			if (instance_exists(oPlayer)) 
 			{
+				//Checks to see if the enemy is at a ledge
 				CheckForEdge(x+hsp + (sprite_width / 2), y+1);
 			
+				//If the player is out of the chase range, set state to idle
 				distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 				if (distance_to_player > chase_range) state = "idle";		
 				else {	
 			
+					//Set sprite and frame, direction the animation is facing
 					SpriteStateSet(chaseSprite, 0)																		
 					image_xscale = sign(oPlayer.x - x);
 		
@@ -57,9 +67,12 @@ switch (state) {
 		
 					distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 		
+					//If the player is within the attack range, set state to attack, if not
+					// continue to move and collide
 					if (distance_to_player < attack_range) state = "attack";
-					else EnemyMoveAndCollide(image_xscale * walksp, 0);
+					else MoveAndCollide(image_xscale * walksp, 0);
 				}
+			//Set state to idle
 			} else {			
 				state = "idle";
 			}
@@ -70,8 +83,10 @@ switch (state) {
 	
 	case "attack":
 		#region Attack State
+			//Set sprite and frame
 			SpriteStateSet(attackSprite, 0);
 		
+			//If a specific fram eis hit, create a hitbox
 			if (AnimationFrameHit(attackFrameHit))
 			{
 				CreateHitbox(x, y, self, attackHitBoxSprite, knockbackDistance, 1, damage, image_xscale);
@@ -81,18 +96,9 @@ switch (state) {
 	
 	case "hit":
 		#region Hit State
-			SpriteStateSet(hitSprite, 0);
-			
-			EnemyMoveAndCollide(knockback_speed , 0);
-			knockback_speed = Approach(knockback_speed, 0, 0.5);
-			
-			if (knockback_speed == 0) 
-			{
-				if (AnimationFrameHit(hitFrame)) {
-					knockback_speed = 0;
-					state = "chase";
-				}
-			}
+				
+			Knockback(hitSprite, "chase");
+
 		#endregion
 		break;
 	

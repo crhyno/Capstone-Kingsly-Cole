@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//Script thats used from player collision to check for walls while jumping and falling
 function Collision(xspeed, yspeed){
 	
 	if (place_meeting(xspeed,y,oWall)) 

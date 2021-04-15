@@ -1,4 +1,4 @@
-function ApplyFriction(current_value, target_value, change_amount){
+function Approach(current_value, target_value, change_amount){
 	if (current_value < target_value)
 	{
 		current_value += change_amount;

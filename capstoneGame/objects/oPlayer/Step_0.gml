@@ -1,4 +1,4 @@
-//Gets the players input
+//Gets the players input if the player has control
 if (hasControl) 
 {
 	key_left = keyboard_check(ord("A"));
@@ -72,6 +72,9 @@ switch (state)
 
 			if (hsp != 0) image_xscale = sign(hsp);
 	
+			//If vertical speed equals zero check to see if attack1 key is hit and depending on
+			// the direction the player is facing and if the player is not too close to a wall,
+			// switch state to attack one
 			if (vsp == 0) 
 			{
 				if (key_attack == 1) 
@@ -80,19 +83,17 @@ switch (state)
 					
 						if (!place_meeting(x + 10, y, oWall)) {
 							state = "attack one";
-							image_index = 0;
 						}
 					}
 					if (image_xscale == -1) {
 					
 						if (!place_meeting(x - 10, y, oWall)) {
 							state = "attack one";
-							image_index = 0;
 						}
 					}
 				}
+				//If roll key is hit, change state to roll
 				if (key_roll == 1) {
-					image_index = 0;
 					state = "roll";
 				}
 			}
@@ -104,22 +105,28 @@ switch (state)
 	case "roll":
 		#region Roll State
 		
+			//Sets sprite and frame
 			SpriteStateSet(sPlayerRO, 0);
-	
+			
+			//Checks to see if too close to wall
 			if (!place_meeting(x + 1, y, oWall) || !place_meeting(x - 1, y, oWall)) 
 			{				
 				
+				//Based on direction of player, move horizontally based on current x position
 				image_speed = 1.5;
 				if (image_xscale == -1) x -= 6;
 				if (image_xscale == 1) x += 6;
 				
-				if (!place_meeting(x,y + 50,oWall)) 
+				//If the player hits wall in the middle of roll, change state back to move
+				if (!place_meeting(x,y + 40,oWall)) 
 				{
 					state = "move";
 				}
 			
+				//If a specific frame is hit, change state to move
 				if (AnimationFrameHit(8)) state = "move";
-				
+			
+			//Change state back to move and push player back from wall
 			} else {
 				state = "move";
 				if (image_xscale == -1) x += 2;
@@ -133,14 +140,18 @@ switch (state)
 	case "attack one":
 		#region Attack One State	
 	
+			//Sets sprite and frame
 			SpriteStateSet(sPlayerA, 0);
 			
+			//Creates a hitbox object based on a specific frame hit within the animation
 			if (AnimationFrameHit(2))
 			{
-				CreateHitbox(x, y, self, sPlayerAHB, 24, 1, 5, image_xscale);
+				CreateHitbox(x, y, self, sPlayerAHB, 8, 1, 5, image_xscale);
 				audio_play_sound(mSwordFast,500,0)
 			}
 			
+			//Checks to see if the next attack key is hit between specific frames, if so
+			// change state to attack two
 			if (key_attack2 == 1) && LifeformAnimationFramesHit(4, 6)
 			{
 				state = "attack two";
@@ -151,14 +162,18 @@ switch (state)
 	case "attack two":
 		#region Attack Two State
 		
+			//Sets sprite and frame
 			SpriteStateSet(sPlayerA2, 0);
 		
+			//Creates a hitbox object based on a specific frame hit within the animation
 			if (AnimationFrameHit(2))
 			{
-				CreateHitbox(x, y, self, sPlayerA2HB, 24, 1, 5, image_xscale);
+				CreateHitbox(x, y, self, sPlayerA2HB, 8, 1, 5, image_xscale);
 				audio_play_sound(mSwordFast,550,0)
 			}
-		
+			
+			//Checks to see if the next attack key is hit between specific frames, if so
+			// change state to attack three
 			if (key_attack3 == 1) && LifeformAnimationFramesHit(4, 8) {
 				state = "attack three";
 			}
@@ -169,11 +184,13 @@ switch (state)
 	case "attack three":
 		#region Attack Three State
 		
+			//Sets sprite and frame
 			SpriteStateSet(sPlayerA3, 0);
 		
+			//Creates a hitbox object based on a specific frame hit within the animation
 			if (AnimationFrameHit(3))
 			{
-				CreateHitbox(x, y, self, sPlayerA3HB, 40, 1, 8, image_xscale);
+				CreateHitbox(x, y, self, sPlayerA3HB, 15, 1, 8, image_xscale);
 				audio_play_sound(mSwordHeavy,700,0)
 			}
 		
@@ -183,18 +200,7 @@ switch (state)
 	case "hit":
 		#region Hit State
 		
-			SpriteStateSet(sPlayerH, 0);
-			
-			EnemyMoveAndCollide(knockback_speed , 0);
-			knockback_speed = Approach(knockback_speed, 0, 0.5);
-			
-			if (knockback_speed == 0) 
-			{
-				if (AnimationFrameHit(2)) {
-					knockback_speed = 0;
-					state = "move";
-				}
-			}
+		Knockback(sPlayerH, "move");
 		
 		#endregion
 		break;

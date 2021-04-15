@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//Creates a hitbox for a specific attack animation 
 function CreateHitbox(xPos, yPos, creator, sprite, knockback, lifespan, damage, xscale){
 	
 	var hitbox = instance_create_layer(xPos, yPos, "Entities", oHitbox);

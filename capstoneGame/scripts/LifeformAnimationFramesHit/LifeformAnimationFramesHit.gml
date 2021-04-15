@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+//Script that returns the frames between the two parameters passed in
 function LifeformAnimationFramesHit(low, high){
 	return image_index >= low && image_index <= high;
 }

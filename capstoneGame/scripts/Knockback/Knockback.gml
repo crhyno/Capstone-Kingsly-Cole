@@ -1,12 +1,16 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function Knockback(selectedHitSprite, nextState){
 	
+	//Sets sprite and frame
 	SpriteStateSet(selectedHitSprite, 0);
 			
-	EnemyMoveAndCollide(knockback_speed , 0);
+	//Checks for collisions using the script below
+	MoveAndCollide(knockback_speed , 0);
+	//Sets knockback based the value returned through the Approach script
 	knockback_speed = Approach(knockback_speed, 0, 0.5);
 			
+	//If the lifeform is no longer being knocked back, change state back to move based
+	// on specific animation frame
 	if (knockback_speed == 0) 
 	{
 		if (AnimationFrameHit(hitFrame)) {

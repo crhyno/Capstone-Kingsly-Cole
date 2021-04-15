@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Scripts/Enemies.yy",
+    "name": "General",
+    "path": "folders/Scripts/General.yy",
   },
   "resourceVersion": "1.0",
-  "name": "EnemyMoveAndCollide",
+  "name": "MoveAndCollide",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Music",
+    "path": "folders/Objects/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "oMusicMountains",

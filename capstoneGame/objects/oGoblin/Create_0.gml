@@ -19,4 +19,4 @@ attack_range = 110;
 
 hp = 10;
 damage = 3;
-knockbackDistance = 60;
+knockbackDistance = 8;
