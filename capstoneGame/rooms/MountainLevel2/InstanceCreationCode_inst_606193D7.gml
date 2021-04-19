@@ -1,1 +1,1 @@
-targetLevel = MountainLevel2;
+targetLevel = MainMenu;
